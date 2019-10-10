@@ -15,7 +15,7 @@ public class Provedor {
 	}
 	private void desinscrever (Observador obs) {
 		for(int i: observadores) {
-			if(observadores[i] == obs) {
+			if(observadores.get(i) == obs) {
 				observadores.remove(i);
 			}
 		}
@@ -27,7 +27,7 @@ public class Provedor {
 	
 	private void ativarSensores () {
 		if(s.temperatura >= 360) {
-			
+			this.notificar();
 		}
 	}
 	
