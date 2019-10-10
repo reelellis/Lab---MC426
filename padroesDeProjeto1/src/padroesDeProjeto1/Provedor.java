@@ -6,8 +6,8 @@ import java.util.ArrayList;
 public class Provedor {
 	private ArrayList observadores;
 	private Sensor s;
-	public Provedor () {
-	
+	public Provedor (Sensor s) {
+		this.s = s;
 	}
 	
 	private void inscrever (Observador obs) {
@@ -27,7 +27,7 @@ public class Provedor {
 	
 	private void ativarSensores () {
 		if(s.temperatura >= 360) {
-			notificar.
+			
 		}
 	}
 	
