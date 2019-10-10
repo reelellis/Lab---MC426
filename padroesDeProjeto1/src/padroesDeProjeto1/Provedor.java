@@ -34,7 +34,7 @@ public class Provedor {
 	
 	private void ativarSensores () {
 		if(s.temperatura >= 360) {
-			if (s.umidade >= 40) {
+			if (s.umidade <= 40) {
 				this.notificar(4);
 			}
 			else {
@@ -42,7 +42,7 @@ public class Provedor {
 			}
 		}
 		else if(s.temperatura >= 180) {
-			if(s.umidade >= 40) {
+			if(s.umidade <= 40) {
 				this.notificar(3);
 			}
 			else {
