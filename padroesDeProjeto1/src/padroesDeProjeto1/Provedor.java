@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Provedor {
 	private ArrayList observadores;
 	private Sensor s;
-	public Provedor (Sensor s) {
+	public Provedor (Sensor s, int tempo) {
 		this.s = s;
 	}
 	
@@ -21,13 +21,28 @@ public class Provedor {
 		}
 	}
 	
-	private void notificar() {
-		
+	private void notificar(int nivel) {
+		if(nivel == 1) {
+			
+		}
 	}
 	
 	private void ativarSensores () {
 		if(s.temperatura >= 360) {
-			this.notificar();
+			if (s.umidade >= 40) {
+				this.notificar(4);
+			}
+			else {
+				this.notificar(2);
+			}
+		}
+		else if(s.temperatura >= 180) {
+			if(s.umidade >= 40) {
+				this.notificar(3);
+			}
+			else {
+				this.notificar(1);
+			}
 		}
 	}
 	
