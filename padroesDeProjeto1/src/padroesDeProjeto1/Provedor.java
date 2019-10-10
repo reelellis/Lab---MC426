@@ -14,8 +14,8 @@ public class Provedor {
 		observadores.add(obs);
 	}
 	private void desinscrever (Observador obs) {
-		for(int i: observadores) {
-			if(observadores.get(i) == obs) {
+		for(Observador i: observadores) {
+			if(i == obs) {
 				observadores.remove(i);
 			}
 		}
@@ -24,8 +24,8 @@ public class Provedor {
 	private void notificar(int nivel) {
 		Observador obs;
 		if (nivel == 1) {
-			for(int i: this.observadores) {
-				obs = this.observadores.get(i);
+			for(Observador i: this.observadores) {
+				obs = i;
 				obs.update(nivel);
 			}
 		}
