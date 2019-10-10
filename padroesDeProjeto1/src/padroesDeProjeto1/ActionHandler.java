@@ -4,7 +4,7 @@ public class ActionHandler extends Observador {
 	private int estadoObservador;
 	
 	public void update(int nivel) {
-		this.super.update(nivel);
+		super.update(nivel);
 		
 	}
 	
