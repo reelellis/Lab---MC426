@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 public class Provedor {
-	private ArrayList observadores;
+	private  ArrayList<Observador> observadores;
 	private Sensor s;
 	public Provedor (Sensor s, int tempo) {
 		this.s = s;
@@ -22,9 +22,14 @@ public class Provedor {
 	}
 	
 	private void notificar(int nivel) {
-		if(nivel == 1) {
-			
+		Observador obs;
+		if (nivel == 1) {
+			for(int i: this.observadores) {
+				obs = this.observadores.get(i);
+				obs.update(nivel);
+			}
 		}
+		
 	}
 	
 	private void ativarSensores () {

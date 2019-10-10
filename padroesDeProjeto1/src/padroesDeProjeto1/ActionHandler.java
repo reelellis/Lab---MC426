@@ -1,9 +1,9 @@
 package padroesDeProjeto1;
 
-public class ActionHandler {
+public class ActionHandler extends Observador {
 	private int estadoObservador;
 	
-	public void update(Sensor s) {
+	public void update(int nivel) {
 		if (s.temperatura >= 360) {
 			FabricaAcoesEmail.criarAcaoAlerta();	
 		} 
